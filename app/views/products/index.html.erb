@@ -1,0 +1,30 @@
+<div class="heading">
+<h1 class="header">Coffee Products</h1>
+<hr>
+
+<%= link_to "Createnewproduct", new_product_path %></p>
+<hr>
+<br>
+</div>
+
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="col-md-2 mb-4">
+        <div class="card">
+          <img class="card-img-top" src="" width ="250" heigth="auto" alt="">
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to product.name, product_path(product) %></h5>
+              <p class="card-text">$ <%= product.cost %>
+              <br>
+              Country of Origin: <%= product.country_of_origin %>
+              </p>
+              <a href="#" class="btn btn-outline-primary btn-sm">
+              <%= link_to "See more", product_path(product) %>
+              </a>
+              <a href="#" class="btn btn-outline-secondary btn-sm">
+              <i class="far fa-heart"></i></a>
+            </div>
+        </div>
+      </div>
+    <% end %>
+  </div>

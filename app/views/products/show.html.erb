@@ -1,0 +1,26 @@
+<div class="heading">
+<h1 class="header"><%= @product.name %></h1>
+<h3 class="text">Cost: $<%= @product.cost %>, Origin: <%= @product.country_of_origin %></h3>
+
+<hr>
+<p class="links"><%= link_to "Return to products", products_path %></p>
+<hr>
+</div>
+
+<div class="product_index">
+<% if @product.reviews.any? %>
+  <h4>Here are the reviews for this product:</h4>
+
+  <% @product.reviews.each do |review| %>
+      <p>Author: <%=link_to review.author, product_review_path(@product, review) %></p>
+      <p>Says: <%=review.content_body %> </p>
+      <p>Rating: <%=review.rating %> </p>
+  <% end %>
+<% else %>
+  <p>No reviews are listed for this product.</p>
+<% end %>
+<p><%= link_to "Add a review", new_product_review_path(@product) %></p>
+
+<p><%= link_to "Edit", edit_product_path(@product) %></p>
+<p><%= link_to "Delete product", product_path(@product), :data => {:confirm => "Are you sure?", :method => "delete"} %></p>
+</div>
