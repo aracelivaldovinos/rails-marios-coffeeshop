@@ -16,11 +16,14 @@
  */
 
  body{
-  background-image: url("https://images.unsplash.com/photo-1453614512568-c4024d13c247?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1189&q=80");
+  background-image: url("https://images.unsplash.com/photo-1453614512568-c4024d13c247?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  // background-size: cover;
+  // height: 500px;
+  // background-position: center;
+  // background-repeat: no-repeat;
   text-align: center; 
   margin-left: 5em;
   margin-right: 5em;
@@ -40,9 +43,9 @@
 }
 
 .links{
-  font-size: 20px;
+  font-size: 25px;
   font-family: cursive;
-  word-spacing: 2em;
+  // word-spacing: 0.5em;
 }
 .card{
   border-style: double;
@@ -69,13 +72,16 @@
 .header2{
   font-family:cursive;
   font-size: 50px;
-  font-weight: bold;
+  font-weight:bolder;
   // background-color: whitesmoke;
   opacity: 0.85;
   // margin-left: 15em;
   // margin-right: 15em;
   margin-top: 1em;
   margin-bottom: 1em;
+  color: #FBF7F5;
+  text-shadow: 0 2px black, 0 3px #777;
+
 
 }
 
@@ -113,3 +119,18 @@ img{
 .f{
   padding: 2em;
 }
+
+#form{
+  margin-top: 5em;
+  margin-left: 25em;
+  
+}
+
+#first_row{
+  margin-left: 20em;
+}
+
+
+
+
+

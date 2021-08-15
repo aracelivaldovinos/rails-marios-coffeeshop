@@ -1,4 +1,13 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user! 
+
+  before_action except: [:new, :create, :show] do 
+    unless is_admin? || is_user?
+      flash[:alert] = 'You do not have access to this content.'
+      redirect_to product_path(Product.find(params[:product_id])) 
+      end
+    end
+
   def new
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new  
@@ -8,7 +17,7 @@ class ReviewsController < ApplicationController
   def create
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new(review_params)
-  
+    @review.user_id = current_user.id
     if @review.save
       flash[:notice] = "Hooray!!! Your review is added!"
       redirect_to product_path(@product)
@@ -35,14 +44,13 @@ class ReviewsController < ApplicationController
       flash[:notice] = "YES!!! The review has been updated!"
       redirect_to product_path(@review.product)
     else
-      @product = Product.find(params[params[:product_id]])
+      @product = Product.find(params[:product_id])
       flash[:alert] = "Okay...Try it one more time." 
       render :edit
     end
   end 
 
   def destroy
-    @product = Product.find(params[:product_id])
     @review = Review.find(params[:id])
     @review.destroy
     redirect_to product_path(@review.product)

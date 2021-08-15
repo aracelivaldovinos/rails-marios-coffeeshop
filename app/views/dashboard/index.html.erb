@@ -1,3 +1,4 @@
+
 <div class="heading">
   <h1 class="header">Welcome to 
   <br>
@@ -5,16 +6,12 @@
   <h5 class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</h5>
 </div>
 
-
-
-
-
 <div class="row">
   <h1 class="header2">Our Most Recent Coffee Products</h1>
   <% @recent_products.each do |product| %>
     <div class="col-md-2 mb-4">
       <div class="card">
-        <img class="card-img-top" src="" width ="250" heigth="auto" alt="">
+        <img class="card-img-top" src="<%= Faker::Avatar.image %>" width ="200" heigth="auto" alt="">
         <div class="card-body">
           <h5 class="card-title"><%= product.name %></h5>
           <p class="card-text">$ <%= product.cost %>
@@ -33,10 +30,10 @@
   <% @us_location.each do |product| %>
     <div class="col-md-2 mb-4">
       <div class="card">
-        <img class="card-img-top" src="" width ="250" heigth="auto" alt="">
+        <img class="card-img-top" src="<%= Faker::Avatar.image %>" width ="200" heigth="auto" alt="">
         <div class="card-body">
           <h5 class="card-title"><%= product.name %></h5>
-          <p class="card-text">$: <%= product.cost %>
+          <p class="card-text">$ <%= product.cost %>
           <br>
           Country of Origin: <%= product.country_of_origin %></p>
           <a href="#" class="btn btn-outline-primary btn-sm"><%= link_to "See more", product_path(product) %></a>
@@ -52,10 +49,10 @@
   <% @most_reviews.each do |product| %>
     <div class="col-md-2 mb-4">
       <div class="card">
-        <img class="card-img-top" src="" width ="250" heigth="auto" alt="">
+        <img class="card-img-top" src="<%= Faker::Avatar.image %>" width ="200" heigth="auto" alt="">
         <div class="card-body">
           <h5 class="card-title"><%= product.name %></h5>
-          <p class="card-text">$: <%= product.cost %>
+          <p class="card-text">$ <%= product.cost %>
           <br>
           Country of Origin: <%= product.country_of_origin %></p>
           <a href="#" class="btn btn-outline-primary btn-sm"><%= link_to "See more", product_path(product) %></a>

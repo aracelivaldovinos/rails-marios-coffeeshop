@@ -7,14 +7,19 @@
 <hr>
 </div>
 
+<div class="mx-auto text center" style="width:50%" id="form">
+    <div class="card p-4">
 <div class="product_index">
 <% if @product.reviews.any? %>
-  <h4>Here are the reviews for this product:</h4>
-
+<hr>
+  <h2>Here are the reviews for this product:</h2>
+  <hr>
+  <br>
   <% @product.reviews.each do |review| %>
       <p>Author: <%=link_to review.author, product_review_path(@product, review) %></p>
       <p>Says: <%=review.content_body %> </p>
       <p>Rating: <%=review.rating %> </p>
+      <br>
   <% end %>
 <% else %>
   <p>No reviews are listed for this product.</p>
@@ -23,4 +28,6 @@
 
 <p><%= link_to "Edit", edit_product_path(@product) %></p>
 <p><%= link_to "Delete product", product_path(@product), :data => {:confirm => "Are you sure?", :method => "delete"} %></p>
+</div>
+</div>
 </div>
