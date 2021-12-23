@@ -1,64 +1,86 @@
-
-<div class="heading">
-  <h1 class="header">Welcome to 
-  <br>
-  Marios Specialty Coffee Products Site</h1>
-  <h5 class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</h5>
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>Welcome</h1>
+    <h1>to</h1>
+    <h1>Marios Specialty Coffee Site</h1>
+    <% if current_user %>
+        <%= current_user.email %> 
+        <button class="btn btn-warning">
+          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        </button>
+      <%else%>
+        <button class="btn btn-warning">
+          <%= link_to "Register", new_user_registration_path%>
+        </button>
+        <button class="btn btn-warning">
+          <%= link_to "Login", new_user_session_path%>
+        </button>
+      <%end%>
+      <%= flash[:alert] %>
+      <%= flash[:notice] %> 
+  </div>
 </div>
 
-<div class="row">
-  <h1 class="header2">Our Most Recent Coffee Products</h1>
-  <% @recent_products.each do |product| %>
-    <div class="col-md-2 mb-4">
-      <div class="card">
-        <img class="card-img-top" src="<%= Faker::Avatar.image %>" width ="200" heigth="auto" alt="">
-        <div class="card-body">
-          <h5 class="card-title"><%= product.name %></h5>
-          <p class="card-text">$ <%= product.cost %>
-          <br>
-          Country of Origin: <%= product.country_of_origin %></p>
-          <a href="#" class="btn btn-outline-primary btn-sm"><%= link_to "See more", product_path(product) %></a>
-          <a href="#" class="btn btn-outline-secondary btn-sm"><i class="far fa-heart"></i></a>
+<section class="recent_coffee">
+  <div class="section-title">
+    <h2>Our Most Recent Coffee Products <span>!</span></h2>
+  </div>
+  <div class="row">
+    <% @recent_products.each do |product| %>
+      <div class="col-sm-4 mt-4 mt-lg-0">
+        <div class="box">
+          <img src="<%= Faker::Avatar.image %>" width ="200" heigth="auto" alt="">
+          <h1><%= product.name %></h1>
+          <p class="card-text">$ <%= product.cost %></p>
+          <p>Country of Origin: <%= product.country_of_origin %></p>
         </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+</section>
 
-<div class="row">
-  <h1 class="header2">Our Coffee Products Sold in U.S.</h1>
-  <% @us_location.each do |product| %>
-    <div class="col-md-2 mb-4">
-      <div class="card">
-        <img class="card-img-top" src="<%= Faker::Avatar.image %>" width ="200" heigth="auto" alt="">
-        <div class="card-body">
-          <h5 class="card-title"><%= product.name %></h5>
-          <p class="card-text">$ <%= product.cost %>
-          <br>
-          Country of Origin: <%= product.country_of_origin %></p>
-          <a href="#" class="btn btn-outline-primary btn-sm"><%= link_to "See more", product_path(product) %></a>
-          <a href="#" class="btn btn-outline-secondary btn-sm"><i class="far fa-heart"></i></a>
+<section class="america_coffee">
+  <div class="section-title">
+    <h2>Our Coffee Products Sold in U.S.<span>!</span></h2>
+  </div>
+  <div class="row">
+    <% @us_location.each do |product| %>
+      <div class="col-sm-4 mt-4 mt-lg-0">
+        <div class="box">
+          <img src="<%= Faker::Avatar.image %>" width ="200" heigth="auto" alt="">
+          <h1><%= product.name %></h1>
+          <p class="card-text">$ <%= product.cost %></p>
+          <p>Country of Origin: <%= product.country_of_origin %></p>
         </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+</section>
 
-<div class="row">
-  <h1 class="header2">The Highest Reviewed Coffee Products</h1>
-  <% @most_reviews.each do |product| %>
-    <div class="col-md-2 mb-4">
-      <div class="card">
-        <img class="card-img-top" src="<%= Faker::Avatar.image %>" width ="200" heigth="auto" alt="">
-        <div class="card-body">
-          <h5 class="card-title"><%= product.name %></h5>
-          <p class="card-text">$ <%= product.cost %>
-          <br>
-          Country of Origin: <%= product.country_of_origin %></p>
-          <a href="#" class="btn btn-outline-primary btn-sm"><%= link_to "See more", product_path(product) %></a>
-          <a href="#" class="btn btn-outline-secondary btn-sm"><i class="far fa-heart"></i></a>
+<section class="review_coffee">
+  <div class="section-title">
+    <h2>The Highest Reviewed Coffee Products<span>!</span></h2>
+  </div>
+  <div class="row">
+    <% @most_reviews.each do |product|%>
+      <div class="col-sm-4 mt-4 mt-lg-0">
+        <div class="box">
+          <img src="<%= Faker::Avatar.image %>" width ="200" heigth="auto" alt="">
+          <h1><%= product.name %></h1>
+          <h2>Cost <span>$<%= product.cost %></span></h2>
+          <h2>Country of Origin<span><%= product.country_of_origin %></span></h2>
         </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+</section>
+
+
+  
+
+
+ 
+
+
+
+
