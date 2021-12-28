@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!
   before_action except: [:index, :show] do
-    unless current_user.admin == true
+    unless current_user.admin === true
       flash[:alert] = 'You do not have admin access.'
         redirect_to products_path 
     end

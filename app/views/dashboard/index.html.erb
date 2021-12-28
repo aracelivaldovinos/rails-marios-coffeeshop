@@ -8,11 +8,27 @@
         <h2>
           <span>P.S. That includes you!</span>
         </h2>
-        
       </div>
+        <button class="btn btn-primary">
+          <%= link_to "View Our Coffee Selection", products_path %>
+        </button>
+        <% @top_review.each do |review| %>
+          <div class="review">
+            <p>People are raving about our coffees!</p>
+            <h2><%= review.content_body %></h2>
+            <h4>--<%= review.author %></h4>
+            <h2 style="color:#dec443">
+              <% review.rating.to_i.times do %>
+                ★
+              <%end%>
+            </h2>
+          </div>
+        <%end%>
     </div>
     <div class="col-sm-6">
-      <div class="box"></div>
+      <div class="box">
+          <h1>All Images Are From  <a href="https://unsplash.com/">Unsplash</a></h1>
+      </div>
     </div>
   </div>
 </section>

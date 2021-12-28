@@ -10,6 +10,7 @@ class Product < ApplicationRecord
     .order("reviews_count DESC")
     .limit(6)
     )} 
+  
 
   validates :name, presence: true
   validates :cost, presence: true

@@ -8,6 +8,29 @@
 require 'faker'
 Product.destroy_all
 Review.destroy_all
+User.destroy_all
+
+
+
+users_list = [
+  [true, 'Araceli Valdovinos', 'araceli_admin', 'email@testing.com', 'password' ],
+  [true, 'Admin', 'admin', 'admin@testing.com', 'password' ]
+]
+
+users_list.each do |a, b, c, d, e|
+  User.create!( admin: a, full_name: b, username: c, email: d, password: e)
+end
+
+products_list = [
+  ['Chocolate Roast', '24.55', 'United States'],
+  ['Lovely Dove', '13.62', 'United States'],
+  ['Prickly Pear', '55.31', 'United States']
+]
+
+products_list.each do |a, b, c|
+  Product.create!( name: a, cost: b, country_of_origin: c)
+end
+
 
 10.times do |item|
   user = User.create!(

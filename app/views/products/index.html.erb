@@ -7,7 +7,10 @@
 <section class="recent_coffee">
   <div class="section-title">
     <h2>View Our Coffees</h2>
-    <p><%= link_to "Create new product", new_product_path %></p>
+    <p>
+      <%= link_to "Create", new_product_path %> |
+      <%= link_to "Homepage", root_path %>
+    </p>
   </div>
   <div class="row">
     <% @products.each do |product| %>

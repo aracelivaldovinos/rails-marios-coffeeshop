@@ -33,7 +33,11 @@
         <div class="box1">
           <p>"<%=review.content_body %>"</p>
           <footer>--<%=link_to review.author, product_review_path(@product, review) %></footer>
-          <p><%=review.rating%></p>
+          <p style="color:#dec443">
+            <% review.rating.to_i.times do %>
+              ★
+            <%end%>
+          </p>
         </div>
       <% end %>
     <% else %>

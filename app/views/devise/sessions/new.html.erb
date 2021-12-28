@@ -1,26 +1,38 @@
+<style>                
+  body {                 
+    background-color: #d8e2dc;
+  }
+  .body{
+    background-color: #d8e2dc;
+  }
+  .items h2{
+    color: red; 
+  }
+  .items{
+    color: black; 
+  } 
+  label{
+    font-size: 20px;
+  }
+</style> 
 
 <div class="body">
   <div class="holder">
     <div class="content">
       <div class="items">
-        <h3>Log in</h3>
-        <p>Fill in the line below.</p>
+        <h1>Log In</h1>
+        <p>Fill in the lines below.</p>
+        <p><%= link_to "Homepage", root_path %></p>
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="field">
-            <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-          </div>
-    
-          <div class="field">
-            <%= f.label :password %><br />
-            <%= f.password_field :password, autocomplete: "current-password" %>
-          </div>
-    
+          <%= f.label :email %> <br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          <br>
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "current-password" %>
+          <br>
           <% if devise_mapping.rememberable? %>
-            <div class="field">
-              <%= f.check_box :remember_me %>
-              <%= f.label :remember_me %>
-            </div>
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
           <% end %>
           <br>
           <div class="actions">

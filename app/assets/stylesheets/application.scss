@@ -20,11 +20,18 @@
 
 body, html {
   height: 100%;
+  width: 85%;
   background-color: rgba($color: #ffd7ba, $alpha: 0.15);
   font-family: 'Acme', sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
+.footer-dark{
+  background: white;
+  color: black;
+}
 
 .hero-image {
 background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://images.unsplash.com/photo-1453614512568-c4024d13c247?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80");
@@ -66,14 +73,53 @@ color: white;
   text-shadow: 1px 2px;
 }
 
+.products-section{
+  border-left: solid 3px;
+  border-right: solid 3px;
+  border-color: rgba($color: #ffd7ba, $alpha: 0.15);
+  // background: linear-gradient(rgba($color: #ffd7ba, $alpha: 0.3), whitesmoke);
+  background: linear-gradient(rgba($color: #ffd7ba, $alpha: 0.3), whitesmoke, rgba($color: #ffd7ba, $alpha: 0.3));
+}
 
+.products-section button {
+  height: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 20%;
+}
 
-.recent_coffee{
-  background-color: rgba($color: #ffd7ba, $alpha: 0.15);
-  
+.products-section .review {
+  margin-top: 25%;
+  // background-color: #fffaf3
+}
+.products-section .review h4 {
+  float: right;
+}
+
+.products-section .review p {
+  color: orange;
+  text-shadow: 1px 1px;
+  text-align: center;
+  font-size: 22px;
 }
 
 
+.products-section button:hover {
+  background: lightsteelblue;
+}
+
+.products-section button a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.recent_coffee{
+  // background: linear-gradient( whitesmoke,rgba($color: #ffd7ba, $alpha: 0.3));
+  background: linear-gradient(rgba($color: #ffd7ba, $alpha: 0.3), whitesmoke, rgba($color: #ffd7ba, $alpha: 0.3));
+}
 
 .recent_coffee .box{
   padding: 50px 30px;
@@ -129,13 +175,18 @@ color: white;
   color: #fff;
 }
 
+.america_coffee{
+  // background: linear-gradient(rgba($color: #ffd7ba, $alpha: 0.3), whitesmoke);
+  background: linear-gradient(rgba($color: #ffd7ba, $alpha: 0.3), whitesmoke, rgba($color: #ffd7ba, $alpha: 0.3));
 
+}
 
 .america_coffee .box{
   padding: 50px 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   transition: all ease-in-out 0.3s;
   height: 100%;
+  background-color: rgba($color: lightyellow, $alpha: 0.3)
 }
 
 .america_coffee .box1{
@@ -175,7 +226,7 @@ color: white;
 }
 
 .america_coffee .box:hover {
-  background: orange;
+  background: lightyellow;
   padding: 30px 30px 70px 30px;
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
@@ -185,7 +236,9 @@ color: white;
 }
 
 .review_coffee{
-  background-color: rgba($color: #ffd7ba, $alpha: 0.15);
+  // background: linear-gradient( whitesmoke,rgba($color: #ffd7ba, $alpha: 0.3));
+  background: linear-gradient(rgba($color: #ffd7ba, $alpha: 0.3), whitesmoke, rgba($color: #ffd7ba, $alpha: 0.3));
+
 }
 
 .review_coffee .box{
@@ -363,8 +416,31 @@ text-decoration: underline;
   background-size: cover;
 }
 
+.products-section .box h1{
+  margin-top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  color: white;
+  display: none;
+  font-size: 54px;
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.products-section .box:hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60");
+
+}
+
+.products-section .box:hover h1{
+  display: block;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  transform: rotate(45deg);
+}
+
 .warnings{
-  background-color:whitesmoke;
+  background-color:black;
   color:red;
   font-size: 24px;
   font-family: 'Times New Roman', Times, serif;
