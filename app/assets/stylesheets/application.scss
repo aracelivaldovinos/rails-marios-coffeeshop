@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -16,9 +17,11 @@
  */
 
 
+
 body, html {
   height: 100%;
-  // background-color: rgba($color: #ffd7ba, $alpha: 0.15);
+  background-color: rgba($color: #ffd7ba, $alpha: 0.15);
+  font-family: 'Acme', sans-serif;
 }
 
 
@@ -56,7 +59,6 @@ color: white;
   font-size: 32px;
   font-weight: 700;
   color: #5f5950;
-  // text-shadow: 1px 2px;
 }
 
 .section-title h2 span {
@@ -64,30 +66,38 @@ color: white;
   text-shadow: 1px 2px;
 }
 
-.section-title p {
-  margin: 15px auto 0 auto;
-  font-weight: 300;
-}
+
 
 .recent_coffee{
-  background-color: #fffaf3;
+  background-color: rgba($color: #ffd7ba, $alpha: 0.15);
+  
 }
+
+
 
 .recent_coffee .box{
   padding: 50px 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   transition: all ease-in-out 0.3s;
   height: 100%;
+  background-color: rgba($color: lightsteelblue, $alpha: 0.3);
 }
 
-.recent_coffee .box span {
-  font-family: "Satisfy", sans-serif;
-  text-align: center;
-  display: block;
-  font-size: 28px;
-  font-weight: 700;
-  color: orange;
+.recent_coffee .box1{
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  margin-bottom: 30px;
+  background-color: whitesmoke;
 }
+
+
+.recent_coffee .box h2 {
+  margin: 15px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #5f5950;
+}
+
 
 .recent_coffee .box img {
   display: block;
@@ -96,15 +106,21 @@ color: white;
   width: 50%;
 }
 
-.recent_coffee .box p {
-  color: #aaaaaa;
-  font-size: 15px;
+.recent_coffee .box1 p {
+  color: black;
+  font-size: 24px;
   margin: 0;
   padding: 0;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.recent_coffee .box1 .cost {
+  color: black;
+  font-family:'Times New Roman', Times, serif;
 }
 
 .recent_coffee .box:hover {
-  background: orange;
+  background: lightsteelblue;
   padding: 30px 30px 70px 30px;
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
@@ -114,9 +130,6 @@ color: white;
 }
 
 
-.america_coffee{
-  background-color: white;
-}
 
 .america_coffee .box{
   padding: 50px 30px;
@@ -125,14 +138,21 @@ color: white;
   height: 100%;
 }
 
-.america_coffee .box span {
-  font-family: "Satisfy", sans-serif;
-  text-align: center;
-  display: block;
-  font-size: 28px;
-  font-weight: 700;
-  color: orange;
+.america_coffee .box1{
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  margin-bottom: 30px;
+  background-color: whitesmoke;
 }
+
+
+.america_coffee .box h2 {
+  margin: 15px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #5f5950;
+}
+
 
 .america_coffee .box img {
   display: block;
@@ -141,11 +161,17 @@ color: white;
   width: 50%;
 }
 
-.america_coffee .box p {
-  color: #aaaaaa;
-  font-size: 15px;
+.america_coffee .box1 p {
+  color: black;
+  font-size: 24px;
   margin: 0;
   padding: 0;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.america_coffee .box1 .cost {
+  color: black;
+  font-family:'Times New Roman', Times, serif;
 }
 
 .america_coffee .box:hover {
@@ -159,7 +185,7 @@ color: white;
 }
 
 .review_coffee{
-  background-color: #fffaf3;
+  background-color: rgba($color: #ffd7ba, $alpha: 0.15);
 }
 
 .review_coffee .box{
@@ -167,15 +193,21 @@ color: white;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   transition: all ease-in-out 0.3s;
   height: 100%;
+  background-color: rgba($color: lightsalmon, $alpha: 0.1);
 }
 
-.review_coffee .box span {
-  font-family: "Satisfy", sans-serif;
-  text-align: center;
-  display: block;
-  font-size: 28px;
+.review_coffee .box1{
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  margin-bottom: 30px;
+  background-color: whitesmoke;
+}
+
+.review_coffee .box h2 {
+  margin: 15px 0 0 0;
+  font-size: 32px;
   font-weight: 700;
-  color: orange;
+  color: #5f5950;
 }
 
 .review_coffee .box img {
@@ -185,15 +217,21 @@ color: white;
   width: 50%;
 }
 
-.review_coffee .box p {
-  color: #aaaaaa;
-  font-size: 15px;
+.review_coffee .box1 p {
+  color: black;
+  font-size: 24px;
   margin: 0;
   padding: 0;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.review_coffee .box1 .cost {
+  color: black;
+  font-family:'Times New Roman', Times, serif;
 }
 
 .review_coffee .box:hover {
-  background: orange;
+  background: lightsalmon;
   padding: 30px 30px 70px 30px;
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
@@ -202,130 +240,137 @@ color: white;
   color: #fff;
 }
 
+.card{
+  background-color: #fffaf3;
+  margin-bottom: 10px;
+}
 
+.holder{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 50vh;
+}
 
-// ul {
-//   list-style-type: none;
-//   margin: 0;
-//   padding: 0;
-//   overflow: hidden;
-//   background-color: #333;
-// }
+.holder-1 {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;  
+}
 
-// li {
-//   float: left;
-// }
+.holder .content {
+  position: relative;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 60px;
+}
 
-// li a {
-//   display: block;
-//   color: white;
-//   text-align: center;
-//   padding: 14px 16px;
-//   text-decoration: none;
-// }
+.content .items {
+  border: 3px solid #fff;
+  padding: 40px;
+  display: inline-block;
+  width: 100%;
+  min-width: 540px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  text-align: left;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
 
+.content h3 {
+  color: black;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-family: 'Poppins', sans-serif;
+}
 
+.content h3.title {
+  margin-bottom: 30px;
+}
 
-// .heading{
-//   background-color: white;
-//   padding-top:0.1em;
-//   opacity: 0.85;
-  
-// }
+.content p {
+  color: black;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+}
 
+.content .back_link {
+  color: orange;
+  text-align: right;
+  font-size: 17px;
+  font-weight: 300;
+  /* line-height: 20px; */
+  margin-bottom: 30px;
+}
 
-// .text{
-//   font-size: 25px;
-//   font-family: cursive;
-// }
+.content p a{
+color:black;
+text-decoration: none;
+}
 
-// .links{
-//   font-size: 25px;
-//   // font-family: cursive;
-//   // word-spacing: 0.5em;
-// }
-// .card{
-//   border-style: double;
-//   margin-bottom: 2em;
-//   margin-left: 1em;
-//   margin-right: 1em;
-//   text-align: center;
-//   // background-image:url("https://wallpaperaccess.com/full/2226619.jpg") ;
-//   padding: 1em;
-//   background-color: whitesmoke;
-//   opacity: 0.85;
-// }
+.content p a:hover{
+color: lightskyblue;
+text-decoration: underline;
+}
 
+.content input[type=text]{
+  width: 100%;
+  padding: 9px 20px;
+  text-align: left;
+  border: 0;
+  outline: 0;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  color: #8D8D8D;
+  margin-top: 16px;
+}
 
+.products-section .box{
+  border-radius: 50% 50% 0px 0px;
+  margin-top: 30px;
+  border: 3px solid green;
+  padding: 50px 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 0.3s;
+  height: 75vh;
+  width:100%;
+  margin-bottom: 30px;
+  background-color: #fff;
+  background-image: url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-// .header{
-//   font-family:cursive;
-//   text-align: center;
-//   font-size: 50px;
-//   margin-top: 1.5em;
-//   margin-bottom: 1em;
-// }
+.warnings{
+  background-color:whitesmoke;
+  color:red;
+  font-size: 24px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
 
-// .header2{
-//   font-family:cursive;
-//   font-size: 50px;
-//   font-weight:bolder;
-//   // background-color: whitesmoke;
-//   opacity: 0.85;
-//   // margin-left: 15em;
-//   // margin-right: 15em;
-//   margin-top: 1em;
-//   margin-bottom: 1em;
-//   color: #FBF7F5;
-//   text-shadow: 0 2px black, 0 3px #777;
-
-
-// }
-
-// .header {
-//   display: flex;
-//   flex-direction: row;
-// }
-// .header:before, .header:after{
-//   content: "";
-//   flex: 1 1;
-//   border-bottom: 1px solid;
-//   margin: auto;
-// }
-// .header:before {
-//   margin-right: 10px
-// }
-// .header:after {
-//   margin-left: 10px
-// }
-
-// img{
-//   margin-top: 1em;
-// }
-
-// .form{
-//   margin-top: 5em;
-//   margin-left: 50em;
-//   margin-right: 50em;
-//   background-color: white;
-//   opacity: 0.85;
-//   padding: 5em;
-//   border-radius: 50%;
-// }
-
-// .f{
-//   padding: 2em;
-// }
-
-// #form{
-//   margin-top: 5em;
-//   margin-left: 25em;
-  
-// }
-
-// #first_row{
-//   margin-left: 20em;
-// }
 
 
 

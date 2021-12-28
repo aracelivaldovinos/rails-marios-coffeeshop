@@ -10,6 +10,30 @@
   </head>
 
   <body>
+    <div class="warnings">
+      <%= flash[:alert] %>
+      <%= flash[:notice] %> 
+    </div>
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1>Welcome</h1>
+        <h1>to</h1>
+        <h1>Marios Specialty Coffee Site</h1>
+        <% if current_user %>
+          <%= current_user.email %> 
+          <button class="btn btn-warning">
+            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+          </button>
+        <%else%>
+          <button class="btn btn-warning">
+            <%= link_to "Register", new_user_registration_path%>
+          </button>
+          <button class="btn btn-warning">
+            <%= link_to "Login", new_user_session_path%>
+          </button>
+        <%end%>   
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>

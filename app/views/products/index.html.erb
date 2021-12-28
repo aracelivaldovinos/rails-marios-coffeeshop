@@ -1,31 +1,27 @@
-<div class="heading">
-<h1 class="header">Coffee Products</h1>
-<hr>
+<style>
+  .recent_coffee{
+    background-color: white;
+  }
+</style>
 
-<%= link_to "Create new product", new_product_path %></p>
-<hr>
-<br>
-</div>
-<br>
-<br>
+<section class="recent_coffee">
+  <div class="section-title">
+    <h2>View Our Coffees</h2>
+    <p><%= link_to "Create new product", new_product_path %></p>
+  </div>
   <div class="row">
     <% @products.each do |product| %>
-      <div class="col-md-2 mb-4">
-        <div class="card">
-          <img class="card-img-top" src="<%= Faker::Avatar.image %>" width ="150" heigth="auto" alt="">
-            <div class="card-body">
-              <h5 class="card-title"><%= link_to product.name, product_path(product) %></h5>
-              <p class="card-text">$ <%= product.cost %>
-              <br>
-              Country of Origin: <%= product.country_of_origin %>
-              </p>
-              <a href="#" class="btn btn-outline-primary btn-sm">
-              <%= link_to "See more", product_path(product) %>
-              </a>
-              <a href="#" class="btn btn-outline-secondary btn-sm">
-              <i class="far fa-heart"></i></a>
-            </div>
+      <div class="col-sm-3 mt-4 mt-lg-0">
+        <div class="box">
+          <img src="https://images.unsplash.com/photo-1562051036-e0eea191d42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmVlJTIwYmFnfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" width ="200" heigth="auto" alt="">
+        </div>
+        <div class="box1">
+          <p><%= product.country_of_origin %></p>
+          <h2 class="product_name"><%= link_to product.name, product_path(product) %> <span class="cost">$<%= product.cost %></span></h2>
         </div>
       </div>
     <% end %>
   </div>
+</section>
+
+  
