@@ -10,7 +10,7 @@ describe "it shows user without admin process" do
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @user.password
     click_on 'Log in'
-    click_link 'Create new product'
+    click_link 'Create'
     expect(page).to have_content 'You do not have admin access.'
   end
 end 

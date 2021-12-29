@@ -12,7 +12,7 @@ describe "it shows user without admin process" do
     fill_in 'Password', with: @user.password
     click_on 'Log in'
     click_link @product.name
-    click_link 'Delete product'
+    click_link 'Delete Product'
     expect(page).to have_content 'You do not have admin access.'
   end
 end 

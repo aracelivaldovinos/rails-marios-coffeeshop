@@ -8,7 +8,7 @@ describe "it shows user without admin process" do
     fill_in 'Password', with: '123456'
     fill_in 'Password confirmation', with: '123456'
     click_on 'Sign up'
-    click_link 'Create new product'
+    click_link 'Create'
     expect(page).to have_content 'You do not have admin access.'
   end
   it 'prevents user from editing a product' do
@@ -20,7 +20,7 @@ describe "it shows user without admin process" do
     fill_in 'Password confirmation', with: '123456'
     click_on 'Sign up'
     click_link product.name
-    click_link 'Edit'
+    click_link 'Edit Product'
     expect(page).to have_content 'You do not have admin access.'
   end
   it 'prevents user from deleting a product' do
@@ -32,7 +32,7 @@ describe "it shows user without admin process" do
     fill_in 'Password confirmation', with: '123456'
     click_on 'Sign up'
     click_link product.name
-    click_link 'Delete product'
+    click_link 'Delete Product'
     expect(page).to have_content 'You do not have admin access.'
   end
   it 'it shows user adding a review' do
@@ -52,7 +52,6 @@ describe "it shows user without admin process" do
     expect(page).to have_content 'Hooray!!! Your review is added!'
     expect(page).to have_content 'Test Testing'
     expect(page).to have_content 'Just testing this test to make sure that this test is working.'
-    expect(page).to have_content '4'
   end
   it 'it shows user editing a review' do
     product = Product.create(name: 'The Star', cost: '12.41', country_of_origin: 'Brazil')
@@ -69,13 +68,12 @@ describe "it shows user without admin process" do
     fill_in 'Rating', :with => '4'
     click_on 'Create Review'
     click_link 'Test Testing'
-    click_link 'Edit review'
+    click_link 'Edit Review'
     fill_in 'Rating', :with => '5'
     click_on 'Update Review'
     expect(page).to have_content 'YES!!! The review has been updated!'
     expect(page).to have_content 'Test Testing'
     expect(page).to have_content 'Just testing this test to make sure that this test is working.'
-    expect(page).to have_content '5'
   end
 
   # it 'it shows user editing a review' do
@@ -109,7 +107,7 @@ describe "it shows user without admin process" do
     fill_in 'Rating', :with => 4
     click_on 'Create Review'
     click_link 'Test Testing'
-    click_link 'Delete review'
+    click_link 'Delete Review'
     expect(page).to have_no_content 'Test Testing'
     expect(page).to have_no_content 'Just testing this test to make sure that this test is working.'
   end

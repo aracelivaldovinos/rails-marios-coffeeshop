@@ -10,7 +10,7 @@ describe "it shows admin process" do
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @user.password
     click_on 'Log in'
-    click_link 'Create new product'
+    click_link 'Create'
     fill_in 'Name', :with => 'Lovely Dove'
     fill_in 'Cost', :with => 12.51
     fill_in 'Country of origin', :with => 'United States'
@@ -24,7 +24,6 @@ describe "it shows admin process" do
     expect(page).to have_content 'Hooray!!! Your review is added!'
     expect(page).to have_content 'Test'
     expect(page).to have_content 'This is a test that I am testing to see if it passes.'
-    expect(page).to have_content '5'
   end
   it 'shows admin create a review without a rating' do
     visit '/'
@@ -32,7 +31,7 @@ describe "it shows admin process" do
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @user.password
     click_on 'Log in'
-    click_link 'Create new product'
+    click_link 'Create'
     fill_in 'Name', :with => 'Lovely Dove'
     fill_in 'Cost', :with => 12.51
     fill_in 'Country of origin', :with => 'United States'

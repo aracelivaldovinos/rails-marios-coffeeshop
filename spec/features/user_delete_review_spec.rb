@@ -20,7 +20,7 @@ describe "it shows user without admin process" do
     fill_in 'Rating', :with => '4'
     click_on 'Create Review'
     click_link 'Test Testing'
-    click_on 'Delete review'
+    click_on 'Delete Review'
     expect(page).to have_no_content 'Test Testing'
     expect(page).to have_no_content 'Just testing this test to make sure that this test is working.'
   end
@@ -44,7 +44,7 @@ describe "it shows user without admin process" do
       click_on 'Log in'
       click_link @product.name
       click_link 'Test Testing'
-      click_link 'Delete review'
+      click_link 'Delete Review'
     expect(page).to have_content 'You do not have access to this content.'
   end
 end 

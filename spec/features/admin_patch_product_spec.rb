@@ -10,21 +10,19 @@ describe "it shows admin process" do
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @user.password
     click_on 'Log in'
-    click_link 'Create new product'
+    click_link 'Create'
     fill_in 'Name', :with => 'Lovely Dove'
     fill_in 'Cost', :with => 12.51
     fill_in 'Country of origin', :with => 'United States'
     click_on 'Create Product'
     click_link 'Lovely Dove'
-    click_link 'Edit'
+    click_link 'Edit Product'
     fill_in 'Name', :with => 'Dove'
     fill_in 'Cost', :with => 12.51
     fill_in 'Country of origin', :with => 'United States'
     click_on 'Update Product'
     expect(page).to have_content 'Yay! It is saved!'
     expect(page).to have_content 'Dove'
-    expect(page).to have_content '12.51'
-    expect(page).to have_content 'United States'
   end
   it 'shows admin edit product without cost' do
     visit '/'
@@ -32,13 +30,13 @@ describe "it shows admin process" do
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @user.password
     click_on 'Log in'
-    click_link 'Create new product'
+    click_link 'Create'
     fill_in 'Name', :with => 'Lovely Dove'
     fill_in 'Cost', :with => 12.51
     fill_in 'Country of origin', :with => 'United States'
     click_on 'Create Product'
     click_link 'Lovely Dove'
-    click_link 'Edit'
+    click_link 'Edit Product'
     fill_in 'Name', :with => 'Dove'
     fill_in 'Cost', :with => ''
     fill_in 'Country of origin', :with => 'United States'

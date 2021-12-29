@@ -20,7 +20,6 @@ describe "it shows user without admin process" do
     expect(page).to have_content 'Hooray!!! Your review is added!'
     expect(page).to have_content 'Test Testing'
     expect(page).to have_content 'Just testing this test to make sure that this test is working.'
-    expect(page).to have_content '4'
   end
   it 'shows user create a review with insufficient characters in content' do
     visit '/'

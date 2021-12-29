@@ -10,13 +10,13 @@ describe "it shows admin process" do
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @user.password
     click_on 'Log in'
-    click_link 'Create new product'
+    click_link 'Create'
     fill_in 'Name', :with => 'Lovely Dove'
     fill_in 'Cost', :with => 12.51
     fill_in 'Country of origin', :with => 'United States'
     click_on 'Create Product'
     click_link 'Lovely Dove'
-    click_link 'Delete product'
+    click_link 'Delete Product'
     expect(page).to have_no_content 'Lovely Dove'
     expect(page).to have_no_content '12.51'
     expect(page).to have_no_content 'United States'

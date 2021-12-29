@@ -10,7 +10,7 @@ describe "it shows admin process" do
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @user.password
     click_on 'Log in'
-    click_link 'Create new product'
+    click_link 'Create'
     fill_in 'Name', :with => 'Lovely Dove'
     fill_in 'Cost', :with => 12.51
     fill_in 'Country of origin', :with => 'United States'
@@ -26,7 +26,7 @@ describe "it shows admin process" do
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @user.password
     click_on 'Log in'
-    click_link 'Create new product'
+    click_link 'Create'
     fill_in 'Name', :with => ''
     fill_in 'Cost', :with => 12.51
     fill_in 'Country of origin', :with => 'United States'

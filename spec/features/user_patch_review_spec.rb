@@ -20,13 +20,12 @@ describe "it shows user without admin process" do
     fill_in 'Rating', :with => '4'
     click_on 'Create Review'
     click_link 'Test Testing'
-    click_link 'Edit review'
+    click_link 'Edit Review'
     fill_in 'Rating', :with => '5'
     click_on 'Update Review'
     expect(page).to have_content 'YES!!! The review has been updated!'
     expect(page).to have_content 'Test Testing'
     expect(page).to have_content 'Just testing this test to make sure that this test is working.'
-    expect(page).to have_content '5'
   end
   it 'shows user edit their own review but with insufficient character in content body' do
     visit '/'
@@ -41,7 +40,7 @@ describe "it shows user without admin process" do
     fill_in 'Rating', :with => '4'
     click_on 'Create Review'
     click_link 'Test Testing'
-    click_link 'Edit review'
+    click_link 'Edit Review'
     fill_in 'Content body', :with => 'This is just a test.'
     click_on 'Update Review'
     expect(page).to have_content 'Okay...Try it one more time'
@@ -66,7 +65,7 @@ describe "it shows user without admin process" do
       click_on 'Log in'
       click_link @product.name
       click_link 'Test Testing'
-      click_link 'Edit review'
+      click_link 'Edit Review'
     expect(page).to have_content 'You do not have access to this content.'
   end
 end 
