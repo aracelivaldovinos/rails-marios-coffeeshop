@@ -91,6 +91,7 @@ _You'll be demoing this site to the CEO of Mario's Specialty Foods, so it should
 * _To view all users do `User.all`_
 * _Save selected user in a variable, ex. `user = User.last`_
 * _To admin role to user do `user.admin = true` then save `user.save`_
+* _Current admin info: `email: email@testing.com` `password: password`_
 
 
 ## Known Bugs/Goals
